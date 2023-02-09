@@ -54,7 +54,7 @@ nav {
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
-    max-width: 768px;
+    max-width: 1000px;
     padding: 8px;
 }
 
@@ -83,4 +83,68 @@ nav a:hover {
 
 .nav-links > a {
     margin-left: 8px;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    min-height: 100vh;
+}
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    height: 100%;
+}
+
+.sidebar {
+    padding: 16px 0px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.checkbox {
+    margin-bottom: 24px;
+}
+
+label {
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 16px;
+    transition: background-color 300ms ease, color 300ms ease;
+}
+
+input {
+    visibility: hidden;
+}
+
+input:checked + label {
+    color: #eee;
+    background-color: #8080ff;
+}
+
+.portfolios {
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.portfolio-item {
+    width: 100%;
+
+    display: block;
+
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+
+    background-color: #eee;
+    color: #242424;
 }

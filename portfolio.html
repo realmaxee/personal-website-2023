@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="portfolio">
     <nav>
@@ -16,6 +17,94 @@
             <a href="/contact.html">Contact Me</a>
         </div>
     </nav>
-        
+    <main class="portfolio-wrapper">
+        <div class="sidebar">
+            <!--<div class="checkbox">
+                <input type="checkbox" name="html" id="html" onchange="updatePortfolio()" checked>
+                <label for="html">html</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="css" id="css" onchange="updatePortfolio()" checked>
+                <label for="css">css</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="js" id="js" onchange="updatePortfolio()" checked>
+                <label for="js">javascript</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="php" id="php" onchange="updatePortfolio()" checked>
+                <label for="php">php</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="sql" id="sql" onchange="updatePortfolio()" checked>
+                <label for="sql">sql</label>
+            </div>-->
+
+            <input type="checkbox" name="html" id="html" onchange="updatePortfolio()" checked>
+                <label for="html">html</label>
+                <input type="checkbox" name="css" id="css" onchange="updatePortfolio()" checked>
+                <label for="css">css</label>
+                <input type="checkbox" name="js" id="js" onchange="updatePortfolio()" checked>
+                <label for="js">javascript</label>
+                <input type="checkbox" name="php" id="php" onchange="updatePortfolio()" checked>
+                <label for="php">php</label>
+                <input type="checkbox" name="sql" id="sql" onchange="updatePortfolio()" checked>
+                <label for="sql">sql</label>
+
+
+        </div>
+        <div class="portfolios">
+            <a href="/project.php?id=personal-website" class="portfolio-item html css js php" >
+                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
+                <h3>kadoshnikov.ca</h3>
+                <h4>html, css, js, php</h4>
+                <p>this current website you're looking at.</p>
+                
+            </a>
+
+            <a class="portfolio-item html css">
+                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
+                <h3>uvic car club</h3>
+                <h4>html, css</h4>
+                <p>a website i made for the uvic car club.</p>
+            </a>
+
+            <a class="portfolio-item html css php sql">
+                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
+                <h3>fridge</h3>
+                <h4>html, css, php, sql</h4>
+                <p>a simple program i made to track what i have in my fridge.</p>
+            </a>
+
+            <a class="portfolio-item html css">
+                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
+                <h3>name</h3>
+                <h4>html, css</h4>
+                <p>short description</p>
+            </a>
+        </div>
+    </main>
 </body>
 </html>
+
+<script>
+    function updatePortfolio() {
+        $('.portfolio-item').hide();
+        
+        if(document.getElementById('html').checked) {
+            $('.html').show();
+        }
+        if(document.getElementById('css').checked) {
+            $('.css').show();
+        }
+        if(document.getElementById('js').checked) {
+            $('.js').show();
+        }
+        if(document.getElementById('php').checked) {
+            $('.php').show();
+        }
+        if(document.getElementById('sql').checked) {
+            $('.sql').show();
+        }
+    }
+</script>
