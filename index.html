@@ -6,12 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxim Kadoshnikov</title>
     <link rel="stylesheet" href="style.css">
+    <script src="max_tools.js"></script>
 </head>
 <body class="index">
         <h1>Maxim Kadoshnikov</h1>
-        <h2>Full stack web developer</h2>
-        <a href="/portfolio.html">Portfolio</a>
-        <a href="/about.html">About Me</a>
-        <a href="/contact.html">Contact Me</a>
+        <h2 id="desc">&nbsp;</h2>
+        <a href="/portfolio.html" id="portfolio-link">&nbsp;</a>
+        <a href="/about.html" id="about-link">&nbsp;</a>
+        <a href="/contact.html" id="contact-link">&nbsp;</a>
 </body>
+<script>
+    desc = document.getElementById('desc');
+    portfolio = document.getElementById('portfolio-link');
+    about = document.getElementById('about-link');
+    contact = document.getElementById('contact-link');
+    wait_time = 69;
+
+    function typeInnerHTML(targetElement, text, currentLetter, time) {
+        if (text.length < currentLetter) {
+            targetElement.innerHTML = text
+        } else {
+            targetElement.innerHTML = "&nbsp;" + text.substring(0,currentLetter) + "|";
+            setTimeout(typeInnerHTML, time, targetElement, text, currentLetter + 1, time);
+        }
+    }
+
+    typeElement(desc, "full stack web developer", 0, wait_time);
+    typeElement(portfolio, "portfolio", 2000, wait_time);
+    typeElement(about, "about me", 3000, wait_time);
+    typeElement(contact, "contact", 4000, wait_time)
+</script>
 </html>
