@@ -156,3 +156,31 @@ input:checked + label {
 .portfolio-item > h4,p {
     font-family: 'Courier New', Courier, monospace;
 }
+
+
+/* CONTACT */
+.contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#contact {
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact > * {
+    margin:24px 0px;
+}
+
+#contact a {
+    color: #8080ff;
+}
+
+#contact a:hover {
+    color: black;
+}
