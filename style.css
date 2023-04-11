@@ -11,6 +11,21 @@ a {
     text-decoration: none;
 }
 
+.row {
+    margin:0 auto;
+    width: 100%;
+    max-width: 768px;
+}
+
+.purple-link {
+    color: #8080ff;
+}
+
+.purple-link:hover {
+    color: black;
+}
+
+
 /* INDEX PAGE */
 .index {
     height: 100vh;
@@ -177,10 +192,15 @@ input:checked + label {
     margin:24px 0px;
 }
 
-#contact a {
-    color: #8080ff;
+/* ABOUT ME */
+.about-me {
+    text-align: justify;
 }
 
-#contact a:hover {
-    color: black;
+.about-me h1 {
+    text-align: center;
+}
+
+.about-me h1, p {
+    margin-top: 24px;
 }
