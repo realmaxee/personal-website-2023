@@ -1,0 +1,1 @@
+<?php $name = "The Great Maxee"; $bio = "When life gives you lemons, you throw them in a lake"; $links = array(); ?>

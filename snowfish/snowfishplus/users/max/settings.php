@@ -1,0 +1,1 @@
+<?php $acolor = "#bbdddd"; $bcolor = "rgb(21,26,48)"; $header_link = "https://cdn.discordapp.com/attachments/518643422551212042/518643580559163422/DSC_4269.JPG"; $pfp_link = "https://cdn.discordapp.com/attachments/518643422551212042/799097262752006164/01-01_Sunset_over_the_water_with_dark_trees.jpg"; ?>

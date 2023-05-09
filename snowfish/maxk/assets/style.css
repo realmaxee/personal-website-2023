@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "proxima-nova";
+  src: url("Proxima Nova Extrabold.otf");
+}
+
+body {
+margin:0;
+padding:0;
+font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 600;
+font-style: normal;
+color:#434343;
+background-color:white;
+}
+
+a {
+text-decoration:none;
+}
+
+c {
+color: #3f7790;
+}
+
+.rightnav {
+float:right;
+}
+
+.leftnav {
+float:left
+}
+
+.normalbutton {
+padding: 25px;
+font-weight: lighter;
+font-size:25px;
+}
+
+.title {
+padding: 10px;
+font-weight: Bold;
+font-size:45px;
+}
+
+.link {
+color: white;
+transition: color 0.2s;
+transition: text-shadow 0.2s;
+}
+
+.link:hover {
+color: #3f7790;
+}
+
+.thirds {
+float:left;
+width: 33.33%;
+background-color: rgba(67, 67, 67, 0.5);
+overflow:hidden;
+text-align:centerl
+transition:background-color 0.2s
+}
+
+.thirds:hover {
+background-color: rgba(67, 67, 67, 1)
+}
+
+.header {
+background-image: url("header.png");
+background-color:white;
+background-repeat:no-repeat;
+background-size:100%;
+background-position:center;
+text-align: center;
+padding: 150px;
+backdrop-filter: blur(5px);
+
+font-size:40px;
+color:white;
+}
+
+#johncena {
+background-color: rgba(67, 67, 67, 0.5);
+color: white;
+position:sticky;
+top:0px;
+backdrop-filter: blur(10px);
+z-index:1000;
+overflow:hidden;
+
+padding: 0px 15px 0px 15px;
+}
+
+.social-icons {
+color:white;
+font-size: 64px;
+
+padding: 0px 15px 0px 25px;
+}
+
+.social-icons:hover {
+color: #3f7790;
+/*text-shadow: 2px 2px 4px black;*/
+}
+
+.content {
+text-align:center;
+padding:70px;
+}
+
+.iframe-container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 60%;
+  padding-bottom: 33.75%;
+  
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+padding:50px;
+background-color:#434343;
+text-align:center;
+color:white;
+}
+
+
+
+
+
+@media only screen and (max-width: 1080px) {
+  /* For 1080p devices: */
+  .header {
+  background-size:auto 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #johncena {
+  position:static;
+  height:65px;
+  text-align:center;
+  }
+  
+  .normalbutton {
+  padding: 10px;
+  font-weight: Bold;
+  font-size:45px;
+  }
+  
+  .title {
+  display:none
+  }
+  
+  .rightnav {
+  float:none;
+  }
+
+  .leftnav {
+  float:none
+  }
+}
+
+@media only screen and (max-width: 674px) {
+  /* For mobile phones: */
+  #johncena {
+  text-align:center;
+  position:static;
+  height:160px;
+  }
+  
+  .rightnav {
+  float:none;
+  }
+
+  .leftnav {
+  float:none
+  }
+  
+  .title {
+  width:100%
+  }
+}

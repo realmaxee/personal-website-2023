@@ -1,0 +1,1 @@
+<?php $acolor = ""; $bcolor = ""; $header_link = "users/test/header.png"; $pfp_link = "users/test/pfp.png"; ?>

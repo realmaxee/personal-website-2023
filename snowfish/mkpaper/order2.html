@@ -1,0 +1,156 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<script>
+function displaypaperprice() {
+  var dropdown1 = document.getElementById("paperprice");
+  var dropdown2 = document.getElementById("paperquantity").value;
+  var value1 = dropdown1.options[dropdown1.selectedIndex].value;
+  var value2 = dropdown2.options[dropdown2.selectedIndex].value;
+  var outputspan = document.getElementById("quantityprice");
+  var output = value1 * value2;
+  //output.innerHTML = dropdown2.value;
+  outputspan.innerHTML = value1;
+};
+</script>
+
+<style>
+
+#topnav {
+  font-height:6vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 8vh;
+  background-color: #66ccff;
+  text-shadow: 2px 2px 0px black;
+  text-decoration: none;
+}
+
+#topnavleft {
+  float:left;
+  padding-left:2vw;
+  margin-top:0vw;
+  height:8vh;
+  background-color:#66ccff;
+  color: white;
+}
+
+#topnavright {
+  float:right;
+  padding-right:2vw;
+  margin-top:0vw;
+  height:8vh;
+  background-color:#66ccff;
+  color: white;
+}
+
+#paperimg {
+  width: 50vw;
+}
+
+a {text-decoration:none}
+
+.slidecontainer {width:80vw;}
+</style>
+
+<title>MK PAPER DISTRIBUTION</title>
+</head>
+
+<body>
+<div id="topnav">
+<div id="topnavleft">
+<h1>MK PAPER DISTRIBUTION CO.</h1>
+</div>
+<div id="topnavright">
+<a href='index.html'><h1>Home</h1></a>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<fieldset id="orderformpaper">
+
+<h2>What Kind Of Paper Do You Want</h2>
+<select>
+  <option id="paperprice" value=0.69>Plain Paper</option>
+  <option id="paperprice" value=0.75>White Paper</option>
+  <option id="paperprice" value=1.25>Plain White Paper</option>
+  <option id="paperprice" value=1.30>Lined Paper</option>
+  <option id="paperprice" value=1.50>White Lined Paper</option>
+  <option id="paperprice" value=2.00>Lined Paper with Math on it</option>
+  <option id="paperprice" value=3.50>Crumpled Paper</option>
+</select>
+
+<br>
+<br>
+
+<h2>How Many Folds Do You Want The Paper To Have?</h2>
+<select>
+  <option value="3">3 Folds</option>
+  <option value="4">4 Folds</option>
+  <option value="5">5 Folds</option>
+  <option value="6">6 Folds</option>
+</select>
+
+<h2>Quantity of Paper</h2>
+<select>
+  <option id="paperquantity" value=1>1 Piece</option>
+  <option id="paperquantity" value=2>2 Pieces</option>
+  <option id="paperquantity" value=3>3 Pieces</option>
+</select>
+
+<!--<input type="button" id="updateprice" value="Calculate Price">-->
+<p>Price of Paper: many<span id="quantityprice"></span></p>
+<script>
+document.getElementById('updateprice').addEventListener('click', displaypaperprice);
+</script>
+</fieldset>
+
+<fieldset id="orderformcreds">
+
+<h2>Payment</h2>
+<div class="slidecontainer">
+  <input type="range" min="000000000000001" max="999999999999999" value="555555555555555" class="slider" id="myRange">
+  <p>Card: <span id="demo"></span></p>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output2 = document.getElementById("demo");
+output2.innerHTML = slider.value;
+
+slider.oninput = function() {
+  //var output3 = output2.toString();
+  //var cardoutput = output3.slice(1,4) + " " + output3.slice(5,8) + " " + output3.slice(9,12) + " " + output3.slice(13,16);
+  output2.innerHTML = this.value;
+}
+</script>
+</fieldset>
+
+<fieldset id="orderformaddress">
+
+<h2>What country do you live in</h2>
+<select>
+  <option id="address" value="a">A. All of the above</option>
+  <option id="address" value="b">B. Uganda</option>
+  <option id="address" value="c">C. USA</option>
+  <option id="address" value="d">D. Canada</option>
+  <option id="address" value="f">F. Asia</option>
+  <option id="address" value="g">G. australia</option>
+  <option id="address" value="h">H. Anywhere Else</option>
+</select>
+
+</fieldset>
+<fieldset id="orderformbutton">
+
+<input type="button" value="order" onclick="alert('Error: Task Failed Succesfully');">
+</fieldset>
+</body>
+</html>
