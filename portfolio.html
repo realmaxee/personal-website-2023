@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="portfolio">
@@ -40,16 +41,22 @@
                 <label for="sql">sql</label>
             </div>-->
 
-                <input type="checkbox" name="html" id="html" onchange="updatePortfolio()" checked>
+                <input type="checkbox" name="html" id="html" onchange="updatePortfolio()" checked class="portfolio-checkbox">
                 <label for="html">html</label>
-                <input type="checkbox" name="css" id="css" onchange="updatePortfolio()" checked>
+                <input type="checkbox" name="css" id="css" onchange="updatePortfolio()" checked class="portfolio-checkbox">
                 <label for="css">css</label>
-                <input type="checkbox" name="js" id="js" onchange="updatePortfolio()" checked>
+                <input type="checkbox" name="js" id="js" onchange="updatePortfolio()" checked class="portfolio-checkbox">
                 <label for="js">javascript</label>
-                <input type="checkbox" name="php" id="php" onchange="updatePortfolio()" checked>
+                <input type="checkbox" name="php" id="php" onchange="updatePortfolio()" checked class="portfolio-checkbox">
                 <label for="php">php</label>
-                <input type="checkbox" name="sql" id="sql" onchange="updatePortfolio()" checked>
+                <input type="checkbox" name="sql" id="sql" onchange="updatePortfolio()" checked class="portfolio-checkbox">
                 <label for="sql">sql</label>
+
+                <br>
+                <br>
+                <button onclick="showAll()">Show All</button>
+                <button onclick="hideAll()">Hide All</button>
+                <input type="button" name="showAll" id="showAll" onclick="showAll()" value="Show All">
             <!--
                                 <br>
                 <input type="checkbox" name="change-All" id="change-All" onchange="changeAll()" checked>
@@ -59,35 +66,117 @@
 
 
         </div>
-        <div class="portfolios">
-            <a href="/project.php?id=personal-website" class="portfolio-item html css js php" >
-                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
-                <h3>kadoshnikov.ca</h3>
-                <h4>html, css, js, php</h4>
-                <p>this current website you're looking at.</p>
-                
-            </a>
+        <div class="portfolio-list-wrapper">
 
-            <a class="portfolio-item html css">
-                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
-                <h3>uvic car club</h3>
-                <h4>html, css</h4>
-                <p>a website i made for the uvic car club.</p>
-            </a>
+            <div class="portfolio-list-wrapper">
+                <div class="portfolio-item html css js" >
+                    <div class="portfolio-item-imgs">
+                        <img src="/images/portfolio-scs.png">
+                    </div>
+                    <div class="portfolio-item-desc">
+                        <h3>slowcarshop</h3>
+                        <h4>html, css, js</h4>
+                        <h4 class="portfolio-item-date portfolio-wip">work in progress</h4>
+                        <div class="portfolio-item-desc-link-wrapper">
+                            <!--<a href="">
+                                <i class="portfolio-item-desc-link fa-brands fa-github"></i>
+                            </a>-->
+                            <a href="http://slowcarshop.ca" target="_blank">
+                                <i class="portfolio-item-desc-link fa-solid fa-link"></i>
+                            </a>
+                        </div>
+                        <p>A single page (for now) website that serves as a landing page for the slowcarshop youtube channel and merch. Currently working on adding a blog to this website.</p>
+                    </div>
+                    
+                </div>
 
-            <a class="portfolio-item html css php sql">
-                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
-                <h3>fridge</h3>
-                <h4>html, css, php, sql</h4>
-                <p>a simple program i made to track what i have in my fridge.</p>
-            </a>
+                <div class="portfolio-item html css js php">
+                    <div class="portfolio-item-imgs">
+                        <img src="/images/portfolio-kadosnikovca.png">
+                    </div>
+                    <div class="portfolio-item-desc">
+                        <h3>kadoshnikov.ca</h3>
+                        <h4>html, css, js, php</h4>
+                        <h4 class="portfolio-item-date">2023</h4>
+                        <div class="portfolio-item-desc-link-wrapper">
+                            <a href="https://github.com/realmaxee/personal-website-2023" target="_blank">
+                                <i class="portfolio-item-desc-link fa-brands fa-github"></i>
+                            </a>
+                            <a href="index.html" target="_blank">
+                                <i class="portfolio-item-desc-link fa-solid fa-link"></i>
+                            </a>
+                        </div>
+                        <p>this current website you're looking at.</p>
+                    </div>
+                </div>
 
-            <a class="portfolio-item html css">
-                <img src="./images/bruh.JPG" alt="" width="30px" height="30px">
-                <h3>name</h3>
-                <h4>html, css</h4>
-                <p>short description</p>
-            </a>
+            <div class="portfolio-item html css">
+                <div class="portfolio-item-imgs">
+                    <img src="/images/portfolio-uvcc.png">
+                </div>
+                <div class="portfolio-item-desc">
+                    <h3>uvic car club</h3>
+                    <h4>html, css</h4>
+                    <h4 class="portfolio-item-date">2022</h4>
+                    <div class="portfolio-item-desc-link-wrapper">
+                        <a href="https://github.com/realmaxee/uviccarclub" target="_blank">
+                            <i class="portfolio-item-desc-link fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://uviccarclub.netlify.app" target="_blank">
+                            <i class="portfolio-item-desc-link fa-solid fa-link"></i>
+                        </a>
+                    </div>
+                    <p>a website i made for the uvic car club. Composed of a single page, it just showcases information about the club.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item html css php sql">
+                <div class="portfolio-item-imgs">
+                    <img src="/images/portfolio-fridge.png">
+                </div>
+                <div class="portfolio-item-desc">
+                    <h3>fridge</h3>
+                    <h4>html, css, php, sql</h4>
+                    <h4 class="portfolio-item-date">2022</h4>
+                    <div class="portfolio-item-desc-link-wrapper">
+                        <a href="https://github.com/realmaxee/fridge" target="_blank">
+                            <i class="portfolio-item-desc-link fa-brands fa-github"></i>
+                        </a>
+                        <a href="http://kadoshnikov.ca/fridge/" target="_blank">
+                            <i class="portfolio-item-desc-link fa-solid fa-link"></i>
+                        </a>
+                    </div>
+                    <p>A simple program i made to track what i have in my fridge. I made it primarily to showcase usage of an SQL database.</p>
+                </div>
+            </div>
+
+            <!--
+                <div class="portfolio-item html css">
+                <div class="portfolio-item-imgs">
+                    <img src="./images/bruh.JPG">
+                </div>
+                <div class="portfolio-item-desc">
+                    <h3>name</h3>
+                    <h4>html, css</h4>
+                    <h4 class="portfolio-item-date">work in progress</h4>
+                    <div class="portfolio-item-desc-link-wrapper">
+                        <a href="" target="_blank">
+                            <i class="portfolio-item-desc-link fa-brands fa-github"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="portfolio-item-desc-link fa-solid fa-link"></i>
+                        </a>
+                    </div>
+                    <p>short description</p>
+                </div>
+            </div>
+            -->
+            
+            
+            <div class="portfolio-item html css js php sql">
+                <h4>I am still in the process of adding all my old projects. I have a lot of Java, PHP and some python projects that can be available upon <a href="contact.html">request</a>. Thank you for your patience. :)</h4>
+            </div>
+            
         </div>
     </main>
 </body>
@@ -112,5 +201,15 @@
         if(document.getElementById('sql').checked) {
             $('.sql').show();
         }
+    }
+
+    function showAll() {
+        $('.portfolio-checkbox').prop("checked", true);
+        updatePortfolio();
+    }
+
+    function hideAll() {
+        $('.portfolio-checkbox').prop("checked", false);
+        updatePortfolio();
     }
 </script>
